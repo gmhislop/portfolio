@@ -78,7 +78,7 @@ const Intro = () => {
 
         <a
           className="group flex items-center gap-2 bg-white text-gray-500 px-7 py-3 rounded-full font-medium
-        outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer borderBlack"
+        outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="/CV.pdf"
           download
         >
@@ -86,7 +86,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack"
+          className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/giovanni-hislop/"
           target="_blank"
         >
@@ -94,7 +94,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack"
+          className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/gmhislop"
           target="_blank"
         >

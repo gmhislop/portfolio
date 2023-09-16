@@ -3,6 +3,17 @@
 import React from 'react';
 import type { SectionName } from '@/lib/types';
 
+type ActiveSectionContextProviderProps = {
+  children: React.ReactNode;
+};
+
+type ActiveSectionContextType = {
+  activeSection: SectionName;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  timeOfLastClick: number;
+  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
+};
+
 export const ActiveSectionContext = React.createContext<ActiveSectionContextType | null>(null);
 
 const ActiveSectionContextProvider = ({ children }: ActiveSectionContextProviderProps) => {
@@ -32,16 +43,6 @@ export const useActiveSectionContext = () => {
   }
 
   return context;
-};
-
-type ActiveSectionContextProviderProps = {
-  children: React.ReactNode;
-};
-type ActiveSectionContextType = {
-  activeSection: SectionName;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
-  timeOfLastClick: number;
-  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 };
 
 export default ActiveSectionContextProvider;
