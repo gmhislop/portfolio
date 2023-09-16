@@ -1,0 +1,43 @@
+import React from 'react';
+import {
+  Html,
+  Head,
+  Body,
+  Heading,
+  Hr,
+  Container,
+  Preview,
+  Section,
+  Text,
+} from '@react-email/components';
+import { Tailwind } from '@react-email/tailwind';
+
+const ContactFormEmail = ({ message, senderEmail }: ContactFormEmailProps) => {
+  return (
+    <Html>
+      <Head />
+      <Preview>New message from your portfolio site</Preview>
+      <Tailwind>
+        <Body className="bg-gray-100 text-black">
+          <Container>
+            <Section className="bg-white borderBlack my-10 px-4 rounded-md">
+              <Heading className="leading-tight">
+                You received the following message from the contact form
+              </Heading>
+              <Text>{message}</Text>
+              <Hr />
+              <Text>The sender's email is: {senderEmail}</Text>
+            </Section>
+          </Container>
+        </Body>
+      </Tailwind>
+    </Html>
+  );
+};
+
+type ContactFormEmailProps = {
+  message: string;
+  senderEmail: string;
+};
+
+export default ContactFormEmail;
