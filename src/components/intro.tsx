@@ -89,6 +89,7 @@ const Intro = () => {
           className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/giovanni-hislop/"
           target="_blank"
+          title="My LinkedIn profile"
         >
           <RiLinkedinFill />
         </a>
@@ -97,6 +98,7 @@ const Intro = () => {
           className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/gmhislop"
           target="_blank"
+          title="My GitHub profile"
         >
           <BsGithub />
         </a>
