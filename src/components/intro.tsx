@@ -41,14 +41,14 @@ const Intro = () => {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl uppercase"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Giovanni.</span> I'm a{' '}
         <span className="font-bold">frontend developer</span> with{' '}
         <span className="font-bold">{new Date().getFullYear() - 2021} years</span> of experience. I
-        enjoy building <span className="italic">web- and mobile applications</span>. My focus is{' '}
+        enjoy building web- and mobile applications. My focus is{' '}
         <span className="underline">React (Next.js)</span> and I'm currently learning React Native,
         WebXR, VR and AR.
       </motion.h1>
@@ -64,29 +64,29 @@ const Intro = () => {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 bg-gray-900 text-white px-7
-            py-3 rounded-full font-medium hover:bg-gray-800 transition
+          className="group flex items-center gap-2 bg-black/10 text-gray-500 px-7
+            py-3 rounded-full font-medium transition
             outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer"
           onClick={() => {
-            setActiveSection('Contact');
+            setActiveSection('CONTACT');
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{' '}
+          CONTACT ME HERE{' '}
           <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
-          className="group flex items-center gap-2 bg-white text-gray-500 px-7 py-3 rounded-full font-medium
+          className="group flex items-center gap-2 bg-[#d0cfc5] text-gray-500 px-7 py-3 rounded-full font-medium
         outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
           href="/CV.pdf"
           download
         >
-          Download CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition" />
+          DOWNLOAD CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition" />
         </a>
 
         <a
-          className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
+          className="flex items-center bg-[#d0cfc5] p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://www.linkedin.com/in/giovanni-hislop/"
           target="_blank"
           title="My LinkedIn profile"
@@ -95,7 +95,7 @@ const Intro = () => {
         </a>
 
         <a
-          className="flex items-center bg-white p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
+          className="flex items-center bg-[#d0cfc5] p-4 text-gray-500 hover:text-gray-950 gap-2 rounded-full cursor-pointer focus:scale-115 hover:scale-110 active:scale-105 borderBlack dark:bg-white/10 dark:text-white/60"
           href="https://github.com/gmhislop"
           target="_blank"
           title="My GitHub profile"

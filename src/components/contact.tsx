@@ -43,17 +43,17 @@ const Contact = () => {
         }}
       >
         <input
-          className="h-14 rounded-lg borderBlack px-4 outline-gray-900 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 tramsition-all dark:outline-none"
+          className="h-14 rounded-lg bg-[#d0cfc5] border border-black px-4 outline-gray-900 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 tramsition-all dark:outline-none"
           name="senderEmail"
           type="email"
-          placeholder="Email"
+          placeholder="ENTER YOUR EMAIL"
           required
           maxLength={500}
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 outline-gray-900 dark:text-black  dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg bg-[#d0cfc5] border border-black p-4 outline-gray-900 dark:text-black  dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           name="message"
-          placeholder="Message"
+          placeholder="ENTER YOUR MESSAGE"
           required
           maxLength={5000}
         />
