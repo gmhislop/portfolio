@@ -64,11 +64,11 @@ const Intro = () => {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 bg-black/10 text-gray-500 px-7
+          className="group flex items-center gap-2 borderBlack text-gray-500 px-7
             py-3 rounded-full font-medium transition
             outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer"
           onClick={() => {
-            setActiveSection('CONTACT');
+            setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
