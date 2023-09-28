@@ -14,48 +14,19 @@ const Intro = () => {
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
-    <section
-      ref={ref}
-      id="home"
-      className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]"
-    >
-      <div className="flex items-center justify-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            type: 'tween',
-            duration: 0.2,
-          }}
-        >
-          <Image
-            src="/images/giovanni.jpg"
-            alt="Giovanni portrait"
-            width={200}
-            height={200}
-            quality={95}
-            priority={true}
-            className="h-32 w-32 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
-          />
-        </motion.div>
-      </div>
-
+    <section ref={ref} id="home" className="mb-28 mt-80 max-w-[50rem] sm:mb-0 scroll-mt-[100rem]">
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl uppercase"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
         <span className="font-bold">Hello, I'm Giovanni.</span> I'm a{' '}
         <span className="font-bold">frontend developer</span> with{' '}
-        <span className="font-bold">{new Date().getFullYear() - 2021} years</span> of experience. I
-        enjoy building web- and mobile applications. My focus is{' '}
-        <span className="underline">React (Next.js)</span> and I'm currently learning React Native,
-        WebXR, VR and AR.
+        <span className="font-bold">{new Date().getFullYear() - 2021} years</span> of experience.
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row
-      items-center justify-center gap-4 px-4 text-lg font-medium"
+        className="flex gap-4 px-4 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -64,16 +35,14 @@ const Intro = () => {
       >
         <Link
           href="#contact"
-          className="group flex items-center gap-2 borderBlack text-gray-500 px-7
-            py-3 rounded-full font-medium transition
-            outline-none focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 cursor-pointer"
+          className="flex items-center gap-2 py-3 font-medium text-gray-500 transition rounded-full outline-none cursor-pointer group borderBlack px-7 focus:outline-none focus:scale-110 hover:scale-110 active:scale-105 dark:border-white/10"
           onClick={() => {
             setActiveSection('Contact');
             setTimeOfLastClick(Date.now());
           }}
         >
           CONTACT ME HERE{' '}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <BsArrowRight className="transition opacity-70 group-hover:translate-x-1" />
         </Link>
 
         <a
@@ -82,7 +51,7 @@ const Intro = () => {
           href="/CV.pdf"
           download
         >
-          DOWNLOAD CV <HiDownload className="opacity-80 group-hover:translate-y-1 transition" />
+          DOWNLOAD CV <HiDownload className="transition opacity-80 group-hover:translate-y-1" />
         </a>
 
         <a

@@ -3,13 +3,81 @@
 @tailwind utilities;
 
 html {
-    --line-color: #e5e7eb; 
+  --line-color: #e5e7eb;
 }
 
 html.dark {
-    --line-color: rgba(255, 255, 255, 0.2);
+  --line-color: rgba(255, 255, 255, 0.2);
 }
 
 .borderBlack {
-    @apply border border-black/10;
+  @apply border border-black/10;
+}
+
+@layer base {
+  :root {
+    --color-text-primary: 38 38 38; /* Black */
+    --color-text-secondary: 255 255 255; /* White */
+    --background: 20 60% 99%; /* Light blue */
+
+    --border-primary: 38 38 38;
+    --border-foreground: 15 60% 99%;
+
+    --primary: 20 60% 99%;
+    --primary-foreground: 38 38 38;
+
+    --secondary: 255 255 255;
+    --secondary-foreground: 15 60% 99%;
+
+    --accent: 15 86 190;
+    --accent-foreground: 255 255 255;
+
+    --neutral: 255 255 255;
+    --neutral-foreground: 15 60% 99%;
+
+    --success: 120 100% 31%; /* Green */
+    --success-foreground: 210 60% 99%; /* Light blue for foreground */
+
+    --warning: 45, 100%, 50%; /* Yellow/Orange */
+    --warning-foreground: 210 60% 99%; /* Light blue for foreground */
+
+    --error: 0, 70%, 50%; /* Red */
+    --error-foreground: 210 60% 99%; /* Light blue for foreground */
+
+    --info: 210 70% 50%;
+    --info-foreground: 210 60% 99%; /* Light blue for foreground */
+  }
+
+  [data-theme='dark'] {
+    --color-text-primary: 255 255 255; /* White */
+    --color-text-secondary: 38 38 38; /* Black */
+    --background: 38 38 38; /* Black */
+
+    --border-primary: 255 255 255;
+    --border-foreground: 15 60% 99%;
+
+    --primary: 38 38 38;
+    --primary-foreground: 255 255 255;
+
+    --secondary: 255 255 255;
+    --secondary-foreground: 15 60% 99%;
+
+    --accent: 15 86 190;
+    --accent-foreground: 255 255 255;
+
+    --neutral: 38 38 38;
+    --neutral-foreground: 255 255 255;
+
+    --success: 120 100% 31%; /* Green */
+    --success-foreground: 210 60% 99%; /* Light blue for foreground */
+
+    --warning: 45, 100%, 50%; /* Yellow/Orange */
+    --warning-foreground: 210 60% 99%; /* Light blue for foreground */
+
+    --error: 0, 70%, 50%; /* Red */
+    --error-foreground: 210 60% 99%; /* Light blue for foreground */
+
+    --info: 210 70% 50%;
+    --info-foreground: 210 60% 99%; /* Light blue for foreground */
+  }
 }
