@@ -11,6 +11,12 @@ const Header = () => {
 
   return (
     <header className="z-[999] relative">
+      <div className="pl-5 fixed h-12 mt-3">
+        <Link href="/">
+          {' '}
+          <a className="text-2xl font-bold text-gray-900 dark:text-gray-400">Giovanni</a>
+        </Link>
+      </div>
       <nav className="flex fixed top-[0.15rem] right-[5rem] h-12 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
         <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
           {links.map((link) => (
@@ -22,7 +28,7 @@ const Header = () => {
             >
               <Link
                 className={clsx(
-                  'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 dark:hover:text-white/20 transition dark:hover:300;',
+                  'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 dark:hover:text-white/20 transition dark:hover:300',
                   {
                     'text-accent dark:text-gray-200': activeSection === link.name,
                   },
