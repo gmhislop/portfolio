@@ -8,8 +8,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        rubik: 'var(--font-rubik)',
+      },
       colors: {
-        background: 'var(--background)',
+        background: 'hsl(var(--background))',
         color: {
           1: 'var(--color-text-primary)',
           2: 'var(--color-text-secondary)',
@@ -27,7 +30,7 @@ const config: Config = {
           foreground: 'var(--muted-foreground)',
         },
         accent: {
-          DEFAULT: 'var(--accent)',
+          DEFAULT: 'hsl(var(--accent))',
           foreground: 'var(--accent-foreground)',
         },
         border: {

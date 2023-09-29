@@ -24,7 +24,7 @@ const Header = () => {
                 className={clsx(
                   'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 dark:hover:text-white/20 transition dark:hover:300;',
                   {
-                    'text-gray-950 dark:text-gray-200': activeSection === link.name,
+                    'text-accent dark:text-gray-200': activeSection === link.name,
                   },
                 )}
                 href={link.hash}
@@ -36,7 +36,7 @@ const Header = () => {
                 {link.name}
                 {link.name === activeSection && (
                   <motion.span
-                    className="absolute inset-0 items-center border rounded-full borderBlack -z-10 dark:bg-gray-800"
+                    className="absolute inset-0 items-center border rounded-full border-accent -z-10 dark:bg-gray-800 text-accent"
                     layoutId="activeSection"
                     transition={{
                       type: 'spring',
