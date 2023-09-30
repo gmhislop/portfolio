@@ -2,14 +2,14 @@
 
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import SectionHeading from './section-heading';
+import SectionHeading from '../common/section-heading';
 import Link from 'next/link';
 import { BsArrowRight, BsGithub } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
-const About = () => {
+export const About = () => {
   const { ref } = useSectionInView('About');
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
@@ -91,5 +91,3 @@ const About = () => {
     </motion.section>
   );
 };
-
-export default About;

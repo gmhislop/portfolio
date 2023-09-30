@@ -3,11 +3,11 @@
 import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import SectionHeading from './section-heading';
-import SubmitBtn from './submit-btn';
+import SectionHeading from '../common/section-heading';
+import SubmitBtn from '../common/submit-btn';
 import toast from 'react-hot-toast';
 
-const Contact = () => {
+export const Contact = () => {
   const { ref } = useSectionInView('Contact');
 
   return (
@@ -21,7 +21,7 @@ const Contact = () => {
       viewport={{ once: true }}
     >
       <SectionHeading>Contact</SectionHeading>
-      <p className="text-gray-700 mt-6 dark:text-white/80">
+      <p className="mt-6 text-gray-700 dark:text-white/80">
         Please contact me directly at{' '}
         <a className="underline" href="mailto:hello@giovannihislop.com">
           hello@giovannihislop.com
@@ -30,7 +30,7 @@ const Contact = () => {
       </p>
 
       <form
-        className="mt-10 flex flex-col dark:text-black"
+        className="flex flex-col mt-10 dark:text-black"
         action={async (formData) => {
           const { data, error } = await sendEmail(formData);
 
@@ -62,5 +62,3 @@ const Contact = () => {
     </motion.section>
   );
 };
-
-export default Contact;

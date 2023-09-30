@@ -3,10 +3,10 @@
 import { projectsData } from '@/lib/data';
 import React from 'react';
 import Project from './project';
-import SectionHeading from './section-heading';
+import SectionHeading from '../common/section-heading';
 import { useSectionInView } from '@/lib/hooks';
 
-const Projects = () => {
+export const Projects = () => {
   const { ref } = useSectionInView('Work');
 
   return (
@@ -22,5 +22,3 @@ const Projects = () => {
     </section>
   );
 };
-
-export default Projects;

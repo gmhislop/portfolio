@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const Intro = () => (
+export const Hero = () => (
   <section
     aria-labelledby="hero"
     className="pb-70 mb-36 mt-40 pt-40 sm:pb-40 sm:pt-50 lg:pb-48 lg:pt-60 w-full sm:p-40 p-20"
@@ -25,5 +25,3 @@ const Intro = () => (
     </motion.p>
   </section>
 );
-
-export default Intro;

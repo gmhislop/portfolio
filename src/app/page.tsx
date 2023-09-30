@@ -1,18 +1,14 @@
-import About from '@/components/about';
-import Contact from '@/components/contact';
-import Experience from '@/components/experience';
-import Intro from '@/components/intro';
-import Projects from '@/components/projects';
-import Skills from '@/components/skills';
+import { About } from '@/components/modules/about';
+import { Contact } from '@/components/modules/contact';
+import { Hero } from '@/components/modules/hero';
+import { Projects } from '@/components/modules/projects';
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center px-4">
-      <Intro />
+      <Hero />
       <About />
       <Projects />
-      <Skills />
-      <Experience />
       <Contact />
     </main>
   );

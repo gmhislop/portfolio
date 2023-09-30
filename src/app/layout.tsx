@@ -1,12 +1,13 @@
-import './globals.css';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
-import ActiveSectionContextProvider from '@/context/active-section-context';
 import { Toaster } from 'react-hot-toast';
-import ThemeSwitch from '@/components/theme-switch';
+import './globals.css';
+
+import ThemeSwitch from '@/components/common/theme-switch';
+import { Footer } from '@/components/modules/footer';
+import { Header } from '@/components/modules/header';
+import ActiveSectionContextProvider from '@/context/active-section-context';
 import ThemeContextProvider from '@/context/theme-contex';
-import Footer from '@/components/footer';
-import { Header } from '@/components/header';
 
 const rubik = Rubik({ subsets: ['latin'], variable: '--font-rubik' });
 
