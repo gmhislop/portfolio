@@ -1,4 +1,3 @@
-import Header from '@/components/header';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
@@ -7,6 +6,7 @@ import { Toaster } from 'react-hot-toast';
 import ThemeSwitch from '@/components/theme-switch';
 import ThemeContextProvider from '@/context/theme-contex';
 import Footer from '@/components/footer';
+import { Header } from '@/components/header';
 
 const rubik = Rubik({ subsets: ['latin'], variable: '--font-rubik' });
 

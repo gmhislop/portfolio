@@ -1,63 +1,80 @@
 'use client';
-import React from 'react';
-import { motion } from 'framer-motion';
+
+import { useState } from 'react';
+import { Dialog } from '@headlessui/react';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+
 import { links } from '@/lib/data';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
 import clsx from 'clsx';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
-const Header = () => {
+export const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="z-[999] relative">
-      <div className="pl-5 fixed h-12 mt-3">
-        <Link href="/">
-          {' '}
-          <a className="text-2xl font-bold text-gray-900 dark:text-gray-400">Giovanni</a>
-        </Link>
+    <header id="home" className="z-[999] relative">
+      <div className="flex fixed top-[0.15rem] gap-x-6 p-6 left-5 lg:flex-1">
+        <p className="-m-1.5 p-1.5 text-3xl font-semibold">
+          <span className="sr-only">Giovanni</span>
+          Giovanni
+        </p>
       </div>
-      <nav className="flex fixed top-[0.15rem] right-[5rem] h-12 py-2 sm:top-[1.7rem] sm:h-[initial] sm:py-0">
-        <ul className="flex w-[22rem] flex-wrap items-center justify-center gap-y-1 text-[0.9rem] font-medium text-gray-500 sm:w-[initial] sm:flex-nowrap sm:gap-5">
+      <nav
+        className=" flex fixed top-[0.15rem] mx-auto right-5 max-w-8xl items-center justify-between gap-x-6 p-6 lg:px-8"
+        aria-label="Global"
+      >
+        <div className="hidden lg:flex lg:gap-x-12">
           {links.map((link) => (
-            <motion.li
-              className="relative flex items-center h-3/4 justify center"
-              key={link.hash}
-              initial={{ y: -100, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
+            <a
+              key={link.name}
+              href={link.hash}
+              className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-500"
             >
-              <Link
-                className={clsx(
-                  'flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 dark:hover:text-white/20 transition dark:hover:300',
-                  {
-                    'text-accent dark:text-gray-200': activeSection === link.name,
-                  },
-                )}
-                href={link.hash}
-                onClick={() => {
-                  setActiveSection(link.name);
-                  setTimeOfLastClick(Date.now());
-                }}
-              >
-                {link.name}
-                {link.name === activeSection && (
-                  <motion.span
-                    className="absolute inset-0 items-center border rounded-full border-accent -z-10 dark:bg-gray-800 text-accent"
-                    layoutId="activeSection"
-                    transition={{
-                      type: 'spring',
-                      stiffness: 380,
-                      damping: 30,
-                    }}
-                  ></motion.span>
-                )}
-              </Link>
-            </motion.li>
+              {link.name}
+            </a>
           ))}
-        </ul>
+        </div>
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(true)}
+          >
+            <span className="sr-only">Open main menu</span>
+            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+          </button>
+        </div>
       </nav>
+      <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <button
+            type="button"
+            className="-m-2.5 rounded-md p-2.5 text-gray-700"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            <span className="sr-only">Close menu</span>
+            <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+          </button>
+          <div className="mt-6 flow-root">
+            <div className="-my-6 divide-y divide-gray-500/10">
+              <div className="space-y-2 py-6">
+                {links.map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.hash}
+                    className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Dialog.Panel>
+      </Dialog>
     </header>
   );
 };
-
-export default Header;

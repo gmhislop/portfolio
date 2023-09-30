@@ -11,24 +11,12 @@ import { TbSchool } from "react-icons/tb";
 
 export const links = [
     {
-        name: "Home",
-        hash: "#home",
-    },
-    {
         name: "About",
         hash: "#about",
     },
     {
-        name: "Projects",
-        hash: "#projects",
-    },
-    {
-        name: "Skills",
-        hash: "#skills",
-    },
-    {
-        name: "Experience",
-        hash: "#experience",
+        name: "Work",
+        hash: "#work",
     },
     {
         name: "Contact",
