@@ -1,13 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import React from 'react';
 import { Dialog } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 
 import { links } from '@/lib/data';
 
 export const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   return (
     <header id="home" className="z-[999]">
@@ -45,7 +45,7 @@ export const Header = () => {
       </nav>
       <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
         <Dialog.Overlay className="fixed inset-0 z-40 bg-black opacity-50" />
-        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-red-900/10">
+        <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full sm:w-[320px] px-6 py-6 overflow-y-auto bg-white sm:max-w-sm sm:ring-1 sm:ring-red-900/10">
           <div className="flex justify-end">
             <button
               type="button"

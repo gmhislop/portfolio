@@ -3,6 +3,7 @@ import { Rubik } from 'next/font/google';
 import { Toaster } from 'react-hot-toast';
 import './globals.css';
 
+import { StickyCursor } from '@/components/common/sticky-cursor';
 import ThemeSwitch from '@/components/common/theme-switch';
 import { Footer } from '@/components/modules/footer';
 import { Header } from '@/components/modules/header';
@@ -24,6 +25,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
+            <StickyCursor />
             <Header />
             {children}
             <Footer />
