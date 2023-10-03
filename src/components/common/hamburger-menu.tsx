@@ -12,7 +12,7 @@ export const HamburgerMenu = () => {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = (e: any) => {
+    const handleScroll = (e: Event) => {
       if (open) {
         e.preventDefault();
       }
