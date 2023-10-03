@@ -17,7 +17,7 @@ type ActiveSectionContextType = {
 export const ActiveSectionContext = React.createContext<ActiveSectionContextType | null>(null);
 
 const ActiveSectionContextProvider = ({ children }: ActiveSectionContextProviderProps) => {
-  const [activeSection, setActiveSection] = React.useState<SectionName>('About');
+  const [activeSection, setActiveSection] = React.useState<SectionName>('Work');
   const [timeOfLastClick, setTimeOfLastClick] = React.useState(0);
 
   return (
