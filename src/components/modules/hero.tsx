@@ -6,7 +6,7 @@ export const Hero = () => {
   return (
     <section
       aria-labelledby="hero"
-      className="w-full p-20 mt-40 pt-60 pb-60 mb-36 sm:pb-40 sm:pt-50 lg:pb-48 lg:pt-60 sm:p-40"
+      className="w-full p-20 mt-30 pt-50 pb-60 mb-36 sm:pb-40 sm:pt-50 lg:pb-48 lg:pt-60 sm:p-40"
     >
       <h1 title="hero" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
         <span className="dark:text-accent">
