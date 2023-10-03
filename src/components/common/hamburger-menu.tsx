@@ -92,7 +92,7 @@ export const HamburgerMenu = () => {
   return (
     <nav className="lg:hidden justify-between items-center py-1 px-2 z-[999]">
       <button className="text-black dark:text-white" onClick={toggleMenu}>
-        <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
