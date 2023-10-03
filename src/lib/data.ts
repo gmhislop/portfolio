@@ -12,10 +12,10 @@ import { RiComputerLine } from "react-icons/ri";
 import { TbSchool } from "react-icons/tb";
 
 export const links = [
-    {
-        name: "About",
-        hash: "#about",
-    },
+    // {
+    //     name: "About",
+    //     hash: "#about",
+    // },
     {
         name: "Work",
         hash: "#work",

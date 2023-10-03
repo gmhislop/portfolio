@@ -10,12 +10,12 @@ import { useActiveSectionContext } from '@/context/active-section-context';
 import { SectionHeading } from '../common/section-heading';
 
 export const About = () => {
-  const { ref } = useSectionInView('About');
+  // const { ref } = useSectionInView('About');
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   return (
     <motion.section
-      ref={ref}
+      // ref={ref}
       className="leading-8 text-center mb-28 sm:mb-40 scroll-m-28"
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}
