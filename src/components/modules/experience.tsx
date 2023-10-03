@@ -1,12 +1,11 @@
 'use client';
 
 import React from 'react';
-import SectionHeading from '../common/section-heading';
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data';
-import { useSectionInView } from '@/lib/hooks';
 import { useTheme } from '@/context/theme-contex';
+import { SectionHeading } from '../common/section-heading';
 
 const Experience = () => {
   const { theme } = useTheme();
@@ -38,7 +37,7 @@ const Experience = () => {
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normaal mt-0">{item.location}</p>
+              <p className="mt-0 font-normaal">{item.location}</p>
               <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
                 {item.description}
               </p>

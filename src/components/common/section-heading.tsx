@@ -4,8 +4,6 @@ type SectionHeadingProps = {
   children: React.ReactNode;
 };
 
-const SectionHeading = ({ children }: SectionHeadingProps) => {
+export const SectionHeading = ({ children }: SectionHeadingProps) => {
   return <h2 className="mb-8 font-medium text-center uppercase text-3-xl">{children}</h2>;
 };
-
-export default SectionHeading;

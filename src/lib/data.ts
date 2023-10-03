@@ -1,8 +1,10 @@
+import React from "react";
+
 import jobnerImg from "public/jobner-1.png";
 import glimbleImg from "public/glimble-1.png";
 import spottenImg from "public/spotten-1.png";
 import dytterImg from "public/dytter-1.webp";
-import React from "react";
+
 import { BiShoppingBag } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
 import { GiHealthNormal } from "react-icons/gi";

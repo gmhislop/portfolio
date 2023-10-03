@@ -3,9 +3,9 @@
 import { sendEmail } from '@/actions/sendEmail';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import SectionHeading from '../common/section-heading';
 import SubmitBtn from '../common/submit-btn';
 import toast from 'react-hot-toast';
+import { SectionHeading } from '../common/section-heading';
 
 export const Contact = () => {
   const { ref } = useSectionInView('Contact');

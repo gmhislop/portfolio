@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 
 type ProjectProps = (typeof projectsData)[number];
 
-export default function Project({ title, description, tags, imageUrl }: ProjectProps) {
+export const Project = ({ title, description, tags, imageUrl }: ProjectProps) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -23,7 +23,7 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
         scale: scaleProgess,
         opacity: opacityProgess,
       }}
-      className="group mb-3 sm:mb-8 last:mb-0"
+      className="mb-3 group sm:mb-8 last:mb-0"
     >
       <section className="bg-[#d0cfc5] max-w-[42rem] borderBlack rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-black/10 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20">
         <div className="pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
@@ -31,7 +31,7 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
           <p className="mt-2 text-xs leading-relaxed text-gray-700 dark:text-white/70">
             {description}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
+          <ul className="flex flex-wrap gap-2 mt-4 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
                 className="bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70 hover:bg-white/10 transition hover:text-black/90 dark:bg-white/10"
@@ -63,4 +63,4 @@ export default function Project({ title, description, tags, imageUrl }: ProjectP
       </section>
     </motion.div>
   );
-}
+};

@@ -2,12 +2,12 @@
 
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
-import SectionHeading from '../common/section-heading';
 import Link from 'next/link';
 import { BsArrowRight, BsGithub } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { RiLinkedinFill } from 'react-icons/ri';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { SectionHeading } from '../common/section-heading';
 
 export const About = () => {
   const { ref } = useSectionInView('About');
@@ -42,7 +42,7 @@ export const About = () => {
         technologies are added regularly that I need to master in order to succeed.
       </p>
       <motion.div
-        className="flex gap-4 px-4 text-lg font-medium sm:flex-row mt-10"
+        className="flex gap-4 px-4 mt-10 text-lg font-medium sm:flex-row"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{

@@ -19,19 +19,3 @@ export function useSectionInView(sectionName: SectionName, threshold = 0.75) {
     ref,
   };
 }
-
-export const useMousePosition = () => {
-  const [mousePosition, setMousePosition] = React.useState({ x: null, y: null });
-
-  const updateMousePosition = (e: { clientX: any; clientY: any }) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
-  };
-
-  React.useEffect(() => {
-    window.addEventListener('mousemove', updateMousePosition);
-
-    return () => window.removeEventListener('mousemove', updateMousePosition);
-  }, []);
-
-  return mousePosition;
-};
