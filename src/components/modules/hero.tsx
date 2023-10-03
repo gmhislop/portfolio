@@ -8,7 +8,7 @@ export const Hero = () => {
       aria-labelledby="hero"
       className="w-full p-20 mt-40 pt-50 pb-60 mb-36 sm:pb-40 sm:pt-50 lg:pb-48 lg:pt-60 sm:p-40"
     >
-      <h1 title="hero" className="text-3xl font-bold tracking-tight text-gray-900 sm:text-6xl">
+      <h1 title="hero" className="text-2xl font-bold tracking-tight text-gray-900 sm:text-6xl">
         <span className="dark:text-accent">
           Bridging the gap <br /> between
         </span>{' '}
