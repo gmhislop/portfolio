@@ -21,7 +21,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${rubik.variable} bg-background text-color-1 relative pt-5 sm:pt-5 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
+        className={`${rubik.variable} bg-background text-color-1 relative pt-5 sm:pt-5 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90 cursor-none`}
       >
         <ThemeContextProvider>
           <ActiveSectionContextProvider>

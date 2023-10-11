@@ -36,7 +36,7 @@ export const StickyCursor = () => {
           left: smoothMouse.x,
           top: smoothMouse.y,
         }}
-        className="fixed hidden w-4 h-4 bg-black rounded-full pointer-events-none lg:flex dark:bg-accent"
+        className="fixed hidden w-8 h-8 bg-black rounded-full pointer-events-none lg:flex dark:bg-accent"
       />
     </section>
   );
