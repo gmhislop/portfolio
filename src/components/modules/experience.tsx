@@ -14,8 +14,8 @@ const Experience = () => {
     <section id="experience" className="scroll-mt-28 mb-28 sm:mb-40">
       <SectionHeading>Experience</SectionHeading>
       <VerticalTimeline lineColor="">
-        {experiencesData.map((item, index) => (
-          <React.Fragment key={index}>
+        {experiencesData.map((item) => (
+          <React.Fragment key={item.id}>
             <VerticalTimelineElement
               contentStyle={{
                 background: theme === 'light' ? '#d0cfc5' : 'rgba(255, 255, 255, 0.05)',

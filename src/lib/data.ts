@@ -28,6 +28,7 @@ export const links = [
 
 export const experiencesData = [
     {
+        id: 1,
         title: "Creative Business Student",
         location: "University InHolland, Amsterdam",
         description:
@@ -36,6 +37,7 @@ export const experiencesData = [
         date: "2014 - 2018",
     },
     {
+        id: 2,
         title: "Founder",
         location: "Alldey Studios, Amsterdam",
         description:
@@ -44,6 +46,7 @@ export const experiencesData = [
         date: "2018 - 2021",
     },
     {
+        id: 3,
         title: "Online Graphic and Web Designer",
         location: "Twisted Foundation, Almere",
         description:
@@ -52,6 +55,7 @@ export const experiencesData = [
         date: "2020 - 2021",
     },
     {
+        id: 4,
         title: "Front-End Developer",
         location: "Dytter, Utrecht",
         description:
@@ -60,6 +64,7 @@ export const experiencesData = [
         date: "2022 - 2023",
     },
     {
+        id: 5,
         title: "Frontend Developer",
         location: "Label A, Amsterdam",
         description:
